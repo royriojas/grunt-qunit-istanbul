@@ -24,12 +24,15 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "grunt-lib-phantomjs-istanbul": "~0.5.0",
     "rimraf": "~2.2.6",
-    "istanbul": "~0.2.6"
+    "istanbul": "~0.2.6",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",
@@ -48,5 +51,6 @@
     "tasks",
     "LICENSE-MIT",
     "phantomjs"
-  ]
+  ],
+  "snyk": true
 }
